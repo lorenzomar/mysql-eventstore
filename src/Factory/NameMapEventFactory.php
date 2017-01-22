@@ -8,8 +8,6 @@
 
 namespace MySqlEventStore\Factory;
 
-use MySqlEventStore\Event;
-
 /**
  * Class NameMapEventFactory
  *
