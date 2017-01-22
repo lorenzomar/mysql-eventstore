@@ -61,19 +61,19 @@ class Event
 
     public function __construct(
         UuidInterface $uuid,
+        $name,
         $streamId,
         $streamCategory,
-        $name,
-        array $payload,
+        array $payload = [],
         array $meta = []
     ) {
         $microseconds = number_format(microtime(true), 6, '.', '');
 
         $this->uuid           = $uuid;
         $this->occurredOn     = \DateTimeImmutable::createFromFormat('U.u', $microseconds);
+        $this->name           = $name;
         $this->streamId       = $streamId;
         $this->streamCategory = $streamCategory;
-        $this->name           = $name;
         $this->payload        = $payload;
         $this->meta           = $meta;
     }
