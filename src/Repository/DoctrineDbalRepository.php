@@ -11,7 +11,6 @@ namespace MySqlEventStore\Repository;
 use Doctrine\DBAL\Driver\Connection;
 use MySqlEventStore\Event;
 use MySqlEventStore\EventHydrator;
-use MySqlEventStore\RepositoryInterface;
 use Ramsey\Uuid\UuidInterface;
 
 /**

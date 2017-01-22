@@ -6,8 +6,9 @@
  * (c) Lorenzo Marzullo <marzullo.lorenzo@gmail.com>
  */
 
-namespace MySqlEventStore;
+namespace MySqlEventStore\Repository;
 
+use MySqlEventStore\Event;
 use Ramsey\Uuid\UuidInterface;
 
 /**
