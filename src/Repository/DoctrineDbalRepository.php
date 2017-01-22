@@ -42,8 +42,7 @@ class DoctrineDbalRepository implements RepositoryInterface
     {
         $this->connection = $connection;
         $this->tableName  = $tableName;
-
-        $this->hydrator = ($hydrator === null) ? new EventHydrator() : $hydrator;
+        $this->hydrator   = ($hydrator === null) ? new EventHydrator() : $hydrator;
     }
 
     public function append($events)
