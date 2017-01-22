@@ -43,7 +43,7 @@ class NameMapEventFactory implements EventFactoryInterface
         } elseif (method_exists($this, $this->map[$name])) {
             return $this->{$this->map[$name]}($name, $streamId, $streamCategory, $payload, $meta);
         } else {
-            throw new \RuntimeException("Found factory is neither a method of the class nor a valid callable.");
+            throw new \RuntimeException("Founded factory is neither a method of the class nor a valid callable.");
         }
 
     }
