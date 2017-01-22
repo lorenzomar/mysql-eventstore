@@ -6,9 +6,7 @@
  * (c) Lorenzo Marzullo <marzullo.lorenzo@gmail.com>
  */
 
-namespace EventStore;
-
-use MySqlEventStore\Event;
+namespace MySqlEventStore;
 
 /**
  * Interface EventEmitterInterface.
