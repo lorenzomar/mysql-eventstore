@@ -12,6 +12,7 @@ use Doctrine\DBAL\Driver\Connection;
 use MySqlEventStore\Event;
 use MySqlEventStore\EventHydrator;
 use Ramsey\Uuid\UuidInterface;
+use Zend\Hydrator\HydratorInterface;
 
 /**
  * Class DoctrineDbalRepository
@@ -28,7 +29,7 @@ class DoctrineDbalRepository implements RepositoryInterface
     private $connection;
 
     /**
-     * @var EventHydrator
+     * @var HydratorInterface
      */
     private $hydrator;
 
@@ -37,11 +38,12 @@ class DoctrineDbalRepository implements RepositoryInterface
      */
     private $tableName;
 
-    public function __construct(Connection $connection, EventHydrator $hydrator, $tableName)
+    public function __construct(Connection $connection, $tableName, HydratorInterface $hydrator = null)
     {
         $this->connection = $connection;
-        $this->hydrator   = $hydrator;
         $this->tableName  = $tableName;
+
+        $this->hydrator = ($hydrator === null) ? new EventHydrator() : $hydrator;
     }
 
     public function append($events)
