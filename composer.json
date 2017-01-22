@@ -1,0 +1,37 @@
+{
+    "name": "lorenzomar/mysql-eventstore",
+    "type": "library",
+    "description": "MySql event store implementation",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lorenzo Marzullo"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MySqlEventStore\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MySqlEventStore\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "ramsey/uuid": "^3.5",
+        "doctrine/dbal": "^2.5",
+        "symfony/console": "^3.2",
+        "lorenzomar/zend-hydrator-utilities": "^0.1",
+        "zendframework/zend-serializer": "^2.8",
+        "zendframework/zend-servicemanager": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "bin": [
+        "bin/mysql-eventstore"
+    ]
+}
