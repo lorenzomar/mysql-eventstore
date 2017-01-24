@@ -6,7 +6,7 @@
  * (c) Lorenzo Marzullo <marzullo.lorenzo@gmail.com>
  */
 
-namespace MySqlEventStore;
+namespace MySqlEventStore\Repository;
 
 use Zend\Hydrator\NamingStrategy\ArrayMapNamingStrategy;
 use Zend\Hydrator\Strategy\SerializableStrategy;

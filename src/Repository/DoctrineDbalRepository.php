@@ -10,7 +10,6 @@ namespace MySqlEventStore\Repository;
 
 use Doctrine\DBAL\Driver\Connection;
 use MySqlEventStore\Event;
-use MySqlEventStore\EventHydrator;
 use Ramsey\Uuid\UuidInterface;
 use Zend\Hydrator\HydratorInterface;
 

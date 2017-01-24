@@ -8,7 +8,6 @@
 
 namespace MySqlEventStore\Repository;
 
-use MySqlEventStore\EventHydrator;
 use Ramsey\Uuid\UuidInterface;
 use Zend\Hydrator\HydratorInterface;
 
@@ -27,7 +26,7 @@ class PdoRepository implements RepositoryInterface
     private $pdo;
 
     /**
-     * @var EventHydrator
+     * @var HydratorInterface
      */
     private $hydrator;
 
