@@ -27,7 +27,7 @@ trait EventEmitterTrait
      *
      * @param Event $event
      */
-    protected function raise(Event $event)
+    public function raise(Event $event)
     {
         $this->pendingEvents[] = $event;
     }
